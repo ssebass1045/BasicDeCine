@@ -29,4 +29,13 @@ const tempData = [
     poster:
       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
+  {
+    title: "Harry Potter y la piedra filosofal",
+    year: 2001,
+    director: "Chris Columbus",
+    duration: "2h 51min",
+    genre: ["Action", "Adventure", "Drama", "Fantasy"],
+    rate: 9.0,
+    poster: "https://www.movistarplus.es/recorte/n/caratula5/F4023033",
+  },
 ];
