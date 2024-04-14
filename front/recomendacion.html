@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>recomendacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    
+
+<!-- Barra de navegación -->
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="navbar text-decoration-none bg-dark p-4">
+        <a href="index.html">Inicio</a>
+        <a href="sobreProyecto.html">Sobre el Proyecto</a>
+        <a href="historiaCine.html">Historia del Cine</a>
+        <a href="recomendacion.html">Páginas Recomendadas (pg. hecha con Bootstrap)</a>
+        <a href="demo02.html">Demo02</a>
+    </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Título de la página -->
+<h1 class="page-title fw-bold text-center">PAGINAS RECOMENDADAS</h1>
+
+<!--....................................................................-->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://www.elgrupoinformatico.com/static/Noticias/2020/04/netflix-rojo-1200x675.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>NETFLIX</h5>
+          <h2><p class="text-danger p-3 mb-2 bg-light">Netflix es un servicio de streaming por suscripción que les permite a sus miembros ver series y películas en un dispositivo con conexión a internet. En función del plan que tengas, también puedes descargar series y películas en un dispositivo con iOS, Android, o Windows 10 y verlas sin conexión a internet..</p></h2>
+          <a href="https://www.netflix.com/co/">LINK</a>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://www.lavanguardia.com/andro4all/hero/2022/02/hbo-max-home.jpg?width=1200&aspect_ratio=16:9" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2><p class="text-primary p-3 mb-2 bg-light">HBO Max es una experiencia de streaming que reúne series y películas nuevas e icónicas de HBO, Warner Bros., DC, Cartoon Network y Max Originals. Con más de 13.000 horas de entretenimiento innovador, siempre encontrarás algo para todos...</p></h2>
+          <a href="https://www.max.com/co/es?reason=anonymous&returnUrl=https%3A%2F%2Fplay.max.com%2F">LINK</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.lavanguardia.com/andro4all/hero/2022/02/prime-video-portada.jpg?width=1200&aspect_ratio=16:9" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>PRIME VIDEO</h5>
+          <h2><p class="text-primary p-3 mb-2 bg-light">Prime Video es un servicio de streaming OTT de películas y series creado y gestionado por Amazon. Se ofrece como un servicio independiente o como parte de la suscripción a Amazon Prime...</p></h2>
+          <a href="https://www.primevideo.com/detail/Login/">LINK</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<!-- JavaScript de Bootstrap (no es necesario incluir Popper.js por separado en Bootstrap 5) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
