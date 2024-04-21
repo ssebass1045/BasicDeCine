@@ -1,10 +1,29 @@
 const renderCards = require("./renderCards");
+const axios = require("axios");
 
-$.get("https://students-api.up.railway.app/movies", (data,) => {
-  renderCards(data);
-});
+const fetchData = async() => {
+    try {
+      const response = await axios.get("https://students-api.up.railway.app/movies");
+      const data = response.data;
+      renderCards(data);
+    } catch (error) {
+      alert(error.message);
+      
+    }
+};
 
 
+
+
+// ----------------------------------------------------------------
+// $.get("https://students-api.up.railway.app/movies", (data,) => {
+//   renderCards(data);
+// });
+
+
+
+
+// ----------------------------------------------------------------
 // document.addEventListener('DOMContentLoaded', function() {
 //     const movieContainer = document.getElementById('movie-container');
 
