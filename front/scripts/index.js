@@ -3,14 +3,20 @@ const axios = require("axios");
 
 const fetchData = async() => {
     try {
-      const response = await axios.get("http://localhost:3000/movies");
-      const data = response.data;
+      const response = await axios.get('http://localhost:3000/movies')
+      const data = response.data
+      console.log(data);
       renderCards(data);
+      
     } catch (error) {
       alert(error.message);
       
     }
-};
+}
+
+fetchData()
+
+
 
 
 
