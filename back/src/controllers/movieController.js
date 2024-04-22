@@ -1,14 +1,9 @@
-const movieService = require("../services/movieService");
+const {getMoviesService} = require('../services/movieService')
 
-module.exports = {
-    getAllMovies: async (req, res) => {
-        try {
-            const movies = await movieService.getMovies();
-            res.status(200).json(movies);
-        } catch (error) {
-            res.status(500).json({
-                error: "Error al obtener las películas",
-            });
-        }
-    },
-};
+const movieController = (req, res) => {
+    const movies = getMoviesService()
+    res.status(200).send(movies)
+}
+
+module.exports = movieController
+

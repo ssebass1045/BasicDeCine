@@ -1,8 +1,8 @@
-const {Router} = require("express");
-const movieController = require("../controllers/movieController");
+const {Router} = require('express')
+const movieController = require('../controllers/movieController')
 
-const movieRouter = Router();
+const movieRouter = Router()
 
-movieRouter.get("/", movieController.getAllMovies);
+movieRouter.get('/', movieController)
 
-module.exports = movieRouter;
+module.exports = {movieRouter}

@@ -2,15 +2,15 @@
 
 // tengo definida la solicitud a GET /movies => controlador
 
-const {Router} = require("express");
-const movieRouter = require("./movieRouter");
+const {Router} = require('express');
+const {movieRouter} = require('./movieRouter')
 
 
 
-const router = Router();
+const router = Router()
 
-router.use("/movies", movieRouter);
+router.use('/movies', movieRouter)
 
 
 
-module.exports = router;
+module.exports = router
