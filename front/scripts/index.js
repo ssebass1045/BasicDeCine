@@ -1,22 +1,77 @@
 const renderCards = require("./renderCards");
 const axios = require("axios");
 
-const fetchData = async() => {
+const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/movies')
-      const data = response.data
-      console.log(data);
-      renderCards(data);
-      
+        const response = await axios.get('http://localhost:3000/movies')
+        const data = response.data
+        console.log(data);
+        renderCards(data);
     } catch (error) {
-      alert(error.message);
-      
+        alert(error.message);
     }
 }
 
-fetchData()
+fetchData();
+
+// Función para limpiar el formulario
+const clearForm = () => {
+    document.getElementById('create-movie-form').reset();
+  };
+  
+  // Función para manejar el envío del formulario
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Evitar el envío del formulario por defecto
+  
+    // Obtener los datos del formulario
+    const formData = {
+      title: document.getElementById('title').value,
+      year: parseInt(document.getElementById('year').value),
+      director: document.getElementById('director').value,
+      duration: document.getElementById('duration').value,
+      genre: document.getElementById('genre').value.split(','), // Convertir a array separado por comas
+      rate: parseFloat(document.getElementById('rate').value),
+      poster: document.getElementById('poster').value
+    };
+  
+    try {
+      // Enviar los datos al backend usando axios
+      const response = await axios.post('http://localhost:3000/movies', formData);
+      alert('Película creada exitosamente');
+      clearForm(); // Limpiar el formulario después de crear la película
+    } catch (error) {
+      console.error('Error al crear la película:', error.message);
+      alert('Error al crear la película');
+    }
+  };
+  
+  // Asignar el manejador de eventos al botón de limpiar formulario
+  document.getElementById('clear-form-btn').addEventListener('click', clearForm);
+  
+  // Asignar el manejador de eventos al formulario para manejar su envío
+  document.getElementById('create-movie-form').addEventListener('submit', handleSubmit);
 
 
+
+// const renderCards = require("./renderCards");
+// const axios = require("axios");
+
+// const fetchData = async() => {
+//     try {
+//       const response = await axios.get('http://localhost:3000/movies')
+//       const data = response.data
+//       console.log(data);
+//       renderCards(data);
+      
+//     } catch (error) {
+//       alert(error.message);
+      
+//     }
+// }
+
+// fetchData()
+
+ 
 
 
 

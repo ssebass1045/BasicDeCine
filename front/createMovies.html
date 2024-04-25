@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>VIDEO SEBAS + - Crear Películas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Inicio</a>
+    <a href="sobreProyecto.html">Sobre el Proyecto</a>
+    <a href="historiaCine.html">Historia del Cine</a>
+    <a href="recomendacion.html">Páginas Recomendadas (pg. hecha con Bootstrap)</a>
+    <a href="demo02.html">Demo02</a>
+    <a href="createMovies.html">Crea Peliculas</a>
+  </div>
+  <h2 class="page-title">VIDEO SEBAS + - Crear Películas</h2>
+  
+ <!-- Formulario para crear películas con estilos de Bootstrap -->
+ <form id="create-movie-form" class="container custom-form">
+  <div class="form-group">
+    <label for="title">Título:</label>
+    <input type="text" class="form-control" id="title" name="title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="year">Año:</label>
+    <input type="number" class="form-control" id="year" name="year" required>
+  </div>
+
+  <div class="form-group">
+    <label for="director">Director:</label>
+    <input type="text" class="form-control" id="director" name="director" required>
+  </div>
+
+  <div class="form-group">
+    <label for="duration">Duración:</label>
+    <input type="text" class="form-control" id="duration" name="duration" required>
+  </div>
+
+  <div class="form-group">
+    <label for="genre">Género:</label>
+    <input type="text" class="form-control" id="genre" name="genre" required>
+  </div>
+
+  <div class="form-group">
+    <label for="rate">Calificación:</label>
+    <input type="number" class="form-control" id="rate" name="rate" step="0.1" min="0" max="10" required>
+  </div>
+
+  <div class="form-group">
+    <label for="poster">URL del Póster:</label>
+    <input type="url" class="form-control" id="poster" name="poster" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear Película</button>
+  <button type="button" id="clear-form-btn" class="btn btn-secondary">Limpiar Formulario</button>
+</form>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./public/bundle.js"></script>
+</body>
+</html>
