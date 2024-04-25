@@ -1,5 +1,16 @@
+require("dotenv").config()
 const app = require("./src/server");
+const dbConexion = require("./src/config/dbConexion"); 
 
-app.listen(3000, () => {
-    console.log("servidor escuchando en el puerto 3000");
+const { PORT } = process.env
+
+dbConexion()
+.then((res) => {
+    app.listen(PORT, () => {
+        console.log(`servidor escuchando en el puerto ${PORT}`)
+
+});
+})
+.catch((err) => {
+    console.log("Error al conectar a la  base de datos");
 });
