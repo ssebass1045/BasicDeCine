@@ -1,4 +1,5 @@
 
+
 const Movies = require('../utils/classMovies');
 const Movie = require('../models/Movie');
 
@@ -12,7 +13,17 @@ module.exports = {
         throw error.message
       }
           
-    }
+    },
+
+    createMovieService: async (movieData) => {
+      try {
+          const newMovie = new Movie(movieData);
+          await newMovie.save();
+          return newMovie;
+      } catch (error) {
+          throw error;
+      }
+  }
 }
 
 
